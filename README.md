@@ -1,1 +1,1 @@
-# this is setting
+# this is An example of memory alignment
