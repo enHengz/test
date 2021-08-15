@@ -1,4 +1,12 @@
-/* */
+/*
+ * Copyright(c) 2021 zhangm All rights reserved. 
+ */
+/*
+ * memory-alignment.c
+ * Original Author: 942202623@qq.com, 2021-08-15
+ *
+ * Just an example of looking at memory
+ */
 
 
 #include <stdio.h>
