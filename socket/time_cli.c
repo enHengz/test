@@ -14,6 +14,7 @@
 #include <arpa/inet.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <sys/types.h>
 #include <string.h>
 
 int main(int argc, char** argv)
@@ -30,14 +31,15 @@ int main(int argc, char** argv)
         printf("socket error");
     }
 
+	printf("start set!\n");
     memset(&servaddr, 0, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
     servaddr.sin_port = htons(13);
-    if (inet_pton(AT_INET, argv[1], &servaddr.sin_addr) <= 0) {
+    if (inet_pton(AF_INET, argv[1], &servaddr.sin_addr) <= 0) {
         printf("inet_pton error for %s", argv[1]);
     }
 
-    if (connect(sockfd, (SA *)&servaddr, sizeof(servaddr)) < 0) {
+    if (connect(sockfd, &servaddr, sizeof(servaddr)) < 0) {
         printf("connect error");
     }
 
