@@ -14,7 +14,7 @@ int main()
     fd_set rdfds;
     FD_ZERO(&rdfds);                // 描述集初始化
     FD_SET(STDIN_FILENO, &rdfds);   // STDIN_FILENO是标准输入， 塞入描述集
-	
+
     int iRet = select(STDIN_FILENO + 1, &rdfds, NULL, NULL, &tv);  // 注意注意
     if(iRet < 0)
 	{
