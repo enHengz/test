@@ -15,6 +15,10 @@ int main(void)
     unsigned int z;
     int i = -20;
     unsigned int j = 10;
+    unsigned int m = -10;
+
+    printf("int m = %d\n", m);
+    printf("unsigned int m = %u\n", m);
 
     k = i + j;
     printf("int k = %d\n", k);
