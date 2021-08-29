@@ -15,6 +15,8 @@ int main(void)
     unsigned int z;
     int i = -20;
     unsigned int j = 10;
+    unsigned int t = -10;
+    unsigned int m;
 
     k = i + j;
     printf("int k = %d\n", k);
@@ -22,6 +24,24 @@ int main(void)
     z = i + j;
     printf("unsigned int z = %d\n", z);
     printf("unsigned int z = %u\n", z);
+
+    m = 9;
+    printf("m unsigned is %u\n", m);
+    printf("m int is %d\n", m);
+
+    if (m >= 0) {
+        printf("m is %u\n", m);
+    }
+
+    m--;
+    printf("m unsigned is %u\n", m);
+    printf("m int is %d\n", m);
+
+#if 1
+    for (m = 9; m >= 0; m--) {
+        printf("m is %u\n", m);
+    }
+#endif
 
     return 0;
 }
